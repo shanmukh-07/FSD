@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task-1</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<button onclick="sh1()">next</button>
+	<button onclick="sh2()">before</button>
+	<p id='q1'>
+		<img src="1.jpeg" style="width:200px;height: 200px;">
+	</p>
+	<script type="text/javascript">
+		var i = 1
+		function sh1(){
+			if (i<8){
+				var ss = ++i;
+				document.getElementById('q1').innerHTML  = "<img src='"+ss+".jpeg' style ='width : 200px;height:200px;'>";
+			}
+		}
+		function sh2(){
+			if (i>1){
+				var ss = --i;
+				document.getElementById('q1').innerHTML  = "<img src='"+ss+".jpeg' style ='width : 200px;height:200px;'>";
+			}
+		}
+	</script>
+</body>
+</html>

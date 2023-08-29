@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM task</title>
+</head>
+<body>
+	<table border=" " id="q1">
+		<thead>
+			<th> Course name</th>
+			<th> Course number</th>
+			<th> Course fees</th>
+			<th> Campus</th>
+		</thead>
+		<tbody id="tb"></tbody>
+	</table>
+	<script type="text/javascript">
+		var data = [{
+			'name' : 'Shanmukh',
+			'rollno' : '21mh1a04l4',
+			'fee' : 5000,
+			'campus' : 'ACOE'
+		},
+		{
+			'name' : 'Nagendra',
+			'rollno' : '21mh1a04q2',
+			'fee' : 6000,
+			'campus' : 'ACOE'
+		},
+		{
+			'name' : 'Yaswanth',
+			'rollno' : '21mh1a04q1',
+			'fee' : 7000,
+			'campus' : 'ACOE'
+		}]
+
+
+		var td = "<tbody>";
+		for (i=0;i<data.length;i++){
+			td += '<tr>'
+			td += '<td>' + data[i].name + '</td>'
+			td += '<td>' + data[i].rollno + '</td>'
+			td += '<td>' + data[i].fee + '</td>'
+			td += '<td>' + data[i].campus + '</td>'
+			td += '</tr>'
+		}
+		td += "</tbody>"
+		document.getElementById('tb').innerHTML = td;
+	</script>
+</body>
+</html>

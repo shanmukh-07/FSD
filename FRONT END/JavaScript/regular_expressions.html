@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regular Expressions</title>
+</head>
+<body>
+	<input type="text" name="" id="inp">
+	<button onclick="func2()">Check</button>
+	<br>
+	<span id="q1"></span>
+	<script type="text/javascript">
+		 // let st = /stack/; // case-sensitive
+		 // let output = st.test("Full Stack Development");
+		 // if (output == true){
+		 // 	alert("Valid");
+		 // }
+		 // else{
+		 // 	alert("Not Valid");
+		 // }
+
+		 // // for not considering case-sensitive
+		 // let st1 = /stack/i; // i is used to not to consider case-sensitive
+		 // let output1 = st1.test("Full Stack Development");
+		 // if (output1 == true){
+		 // 	alert("Valid");
+		 // }
+		 // else{
+		 // 	alert("Not Valid");
+		 // }
+
+
+
+		 // for checking of first letters
+		 // let st2 = /^s/;
+		 // let output2 = st2.test("stack");
+		 // document.write(output2);
+
+
+
+		 // for finding multiple indexes
+		 // let ee = /onics/g;
+		 // let output3 = ee.exec("electronics and communication engineering");
+		 // document.write(output3.index);
+
+
+		// number validation
+		// var pv1 = /^[0-9]{10}$/  // $ checks when length excludes the range of the length({10})
+		// op1 = pv1.test("9492231249");
+
+		// var pv2 = /^[1-9][0-9]{9}$/
+		// op2 = pv2.test("8492231249");
+
+		// document.write(op1);
+		// document.write('<br>');
+		// document.write(op2);
+
+		function func1(){
+			re = /^[1-9][0-9]{9}$/
+			let n = document.getElementById('inp').value;
+			op = re.test(n);
+			if (op == true){
+				document.getElementById('q1').innerText = "Valid";
+				document.getElementById('q1').style.color = 'green';
+			}else{
+				document.getElementById('q1').innerText = "Please check it once";
+				document.getElementById('q1').style.color = 'red';
+			}
+		}
+
+		function func2(){
+			re = /^[a-z]+$/ // for small letters
+			// re = /^[A-Z]+$/ // for capital letters
+			// re = /^[A-Za-z]+$/ // small and big letters
+			// re = /^[a-zA-Z0-9]+$/ //alpha numeric characters
+			// re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; //gmail verification
+
+
+			let n = document.getElementById('inp').value;
+			op = re.test(n);
+			if (op == true){
+				document.getElementById('q1').innerText = "Valid";
+				document.getElementById('q1').style.color = 'green';
+			}else{
+				document.getElementById('q1').innerText = "Please check it once";
+				document.getElementById('q1').style.color = 'red';
+			}
+		}
+	</script>
+</body>
+</html>

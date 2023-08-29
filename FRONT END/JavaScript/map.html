@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Methods</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let names = ['Shanmukh','Andaman','yeswanth','sasi'];
+		// for(i=0;i<names.length;i++){
+		// 	document.write(names[i]+'<br>')
+		// }
+		// map() method
+		let arr = names.map(function(ele,idx,old_arr){
+			return "Dear "+old_arr[idx];
+		})
+		document.write(arr);
+	</script>
+</body>
+</html>

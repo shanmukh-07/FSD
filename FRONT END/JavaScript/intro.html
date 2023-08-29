@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS | Introduction</title>
+	<!-- <script type="text/javascript" src="external.js"></script> -->
+</head>
+<body>
+	<script type="text/javascript">
+		// a = [19,87,'shan',[10,20,30],[2,3,4]];
+		// document.write(a[2][1]);
+		// document.write("<br>");
+		var trainee = [{
+			'name' : 'Shanmukh',
+			'roll_no' : '21MH1A04L4',
+			'college' : 'ACOE',
+			'Branch' : 'ECE'
+		},
+		{
+			'name' : 'Dharan',
+			'roll_no' : '21MH1A04D4',
+			'college' : 'AEC',
+			'Branch' : 'IT'
+		},
+		{
+			'name' : 'Yeswanth',
+			'roll_no' : '21MH1A04Q1',
+			'college' : 'ACET',
+			'Branch' : 'CSE'
+		}]
+		// for (var i = 0; i < trainee.length; i++) {
+		// 	document.write((i+1)," " ,trainee[i]['name']," ",trainee[i]['roll_no']," ",trainee[i]['college']," ",trainee[i]['Branch'],"<br>")
+		// }
+		// 	// document.write(trainee[i].roll_no,"<br>")
+		// 	// document.write(trainee[i].college,"<br>")
+		// 	// document.write(trainee[i].Branch,"<br>")
+		// }
+		for (var i=0; i<trainee.length; i++){
+			document.write((i+1) +"  ")
+			for (let key in trainee[i]){
+				document.write(trainee[i][key] + ' ');
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>

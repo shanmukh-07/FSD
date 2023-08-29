@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>t2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = [{
+			'name' : 'shanmukh',
+			'Rollno' : '21MH1A04L4',
+		},
+		{
+			'name' : 'Yeswanth',
+			'Rollno' : '21MH1A04Q1',
+		},
+		{
+			'name' : 'Sasi',
+			'Rollno' : '21MH1A04O7',
+		}]
+		for (var i=0; i<arr.length; i++){
+			document.write((i+1) +"  ")
+			for (let key in arr[i]){
+				document.write(arr[i][key] + ' ');
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>

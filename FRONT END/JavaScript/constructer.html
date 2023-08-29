@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Constructer</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Data{
+			constructor(slr,inc){
+				this.salary = slr;
+				this.increment = inc;
+				this.sum = function(){
+					return slr+inc;
+				}
+			}
+		}
+		let inf = new Data(65000,65000/10);
+		console.log(inf.salary,inf.increment,inf.sum());
+
+		class car{
+			constructor(mil,tsd,brd){
+				this.milage = mil;
+				this.topspeed = tsd;
+				this.brand = brd;
+			}
+		}
+		let data1 = new car(18,218,"Mahindra");
+		let data2 = new car(22,163,"volkswagon");
+		console.log(data1.milage,data1.topspeed,data1.brand); 
+		console.log(data2.milage,data2.topspeed,data2.brand);
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Win or Lose</title>
+	<style type="text/css"> 
+		label{ 
+			font-weight: bold;
+			font-size: 20px; 
+		} 
+		p{ 
+			text-align: center; 
+		} 
+	</style> 
+</head> 
+<body> 
+	<h3 align="center">Win or Lose</h3> 
+	<input type="radio" name="w2" value="1" style="margin-left:500px;">1 
+	<input type="radio" name="w2" value="2" style="margin-left: 40px;">2 
+	<input type="radio" name="w2" value="3" style="margin-left: 40px;">3
+	<input type="radio" name="w2" value="4" style="margin-left: 40px;">4 
+	<input type="radio" name="w2" value="5" style="margin-left: 40px;">5 
+	<br><br> 
+	<input type="number" style="margin-left: 590px;width: 150px; height: 20px;" id="q1">
+	<br><br> 
+	<button onclick="" style="margin-left:640px" id="e1">Submit</button>
+	<p id="r1"></p> <script type="text/javascript">
+		
+		function random_num(min,max) {
+  			return  Math.floor(Math.random() * (max-min+1) + min);
+		}
+
+
+		function crr(){
+			var sel_val = document.querySelector('input[name=w2]:checked').value;
+			var r_n = random_num(1,9);
+			if (parseInt(sel_val) == r_n){
+				return true
+			}
+			else{
+				return false
+			}
+		}
+
+
+		document.getElementById('e1').addEventListener("click",function(){
+			var s = document.getElementById('q1')
+			s.value = random_num(1,9)
+			var res = crr();
+			if (res){
+				document.getElementById('r1').innerText = "You Win!";
+  			} 
+  			else{
+    			document.getElementById('r1').innerText = "You Lose!";
+  			}
+		})
+
+	</script>
+</body>
+</html>

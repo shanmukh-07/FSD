@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>key_up</title>
+	<style type="text/css">
+		#sp_id{
+			font-size: 20px;
+			color: red;
+		}
+		#in_id{
+			width: 250px;
+			height: 20px;
+			border: 2px solid black;
+		}
+		input{
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<label>Enter Your Name</label>
+	<input type="text" id="in_id" onkeyup="func(this.value)">
+	<br>
+	<span id="sp_id"></span>
+	<script type="text/javascript">
+		function func(str){
+			if (str == ''){
+				document.getElementById('sp_id').innerText = "Please enter characters";
+				document.getElementById('in_id').style.border = "2px solid green";
+			}
+			else if(str.length < 3){
+				document.getElementById('sp_id').innerText = "Please enter the minimum of 3 characters";
+				document.getElementById('in_id').style.border = "2px solid red";
+			}
+			else{
+				document.getElementById('in_id').style.border = "2px solid black";	
+				document.getElementById('sp_id').innerText = "";
+			}
+		}
+	</script>
+</body>
+</html>

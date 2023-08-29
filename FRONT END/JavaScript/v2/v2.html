@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Methods</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = 'Shanmukha Srinivas';
+		function func(st){
+			document.write('<br>'+st);
+		}
+		func("Given String is: "+str);
+		
+
+
+		func(str.substr(3,5)); //.substr() is used for slice the string with two parameters considering as (start,start+n) that means slice starts from 3rd index to (3+5-1)index.
+
+
+
+		func(str.substring(3,5));//.substring() is used to slice string from indexes considered as start from 3rd index and ends at (5-1) index.
+
+
+
+		func(str.replace('h','a'));// .replace() is used to replace the 1st parameter into second parameter but replace changes only one character.
+
+
+
+		func(str.search('a'));//.search() is used find the index of the given parameter but it finds only 1st occurance.
+
+
+		func(str.toLowerCase()); //.toLowerCase() is used to convert the given string into lowercase.
+
+
+		func(str.toUpperCase());// .toUpperCase() is used to convert the given string into uppercase.
+
+
+		func(str.indexOf('n'));// .indexOf() is used to find the given parameter index it returns the 1st occurance index.
+
+
+		func(str.includes('n'));// .includes() the given parameter is present in the string or not.
+
+		func(str.slice(2,7)) //.slice() is used to slice the string from starting parameter to ending-1 parameter.
+
+		func(str.concat('Vasu'));//.concat() is used to add the parameter to the the given string.
+
+
+		func(str.lastIndexOf('s'));// .lastIndexOf() is used to print the last occurance of given parameter.
+
+
+		func(str.charCodeAt(2)); // .charCodeAt() is used to return the unicode code point value of given index.
+
+
+		func(str.trim()); //.trim() is used to remove spaces at starting and ending of the string.
+
+
+		func(str.charAt(7)); // .charAt() is used to return the char at given index.
+
+
+		func(str.valueOf()); // .valueOf() is used to return the premitive value of the string.
+
+
+		func(str.split(' '));// .split() is used to change the str into array it splits at the " ".
+
+
+		func(str.toString()); //.toString() is used to convert the array into string.
+
+
+		func(str.match('han')); // .match() is used to check the given parameter is present in the string or not. if present prints the parameter if not returns nothing.
+
+	</script>
+</body>
+</html>

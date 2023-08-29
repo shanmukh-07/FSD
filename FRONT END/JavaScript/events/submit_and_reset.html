@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form id="q1" onsubmit="return func()" method="post">
+		first Name: <input type="text" name="fname" id="fname_id"><br><br>
+		second Name: <input type="text" name="lname" id="lname_id"><br><br>
+		<span>Choose Your College:</span>
+		<select name="colleges" id="clg_id">
+			<option value="">--select college--</option>
+			<option value="AEC">AEC</option>
+			<option value="ACET">ACET</option>
+			<option value="ACOE">ACOE</option>
+		</select><br><br>
+		Enter your Phone Number: <input type="tel" name="pnum" id="p_num"><br><br>
+		Enter your Email id: <input type="email" name="mail" id="e_mail"><br><br>
+		Enter the password: <input type="password" name="pass" id="passwo_d"><br><br>
+		Choose your gender:<br>
+		<input type="radio" name="r_b">Male<br>
+		<input type="radio" name="r_b">Female<br><br>
+		Terms and conditions:<br>
+		<input type="checkbox" name="c_b" id="w1">are you intrested?<br>
+		<input type="checkbox" name="c_b" id="w1">Do you want to join?
+		<br><br><input type="submit" value="Submit">
+	</form>
+	<script type="text/javascript">
+		function func(){
+			var fname = document.getElementById('fname_id').value;
+			var lname = document.getElementById('lname_id').value;
+			var clg = document.getElementById('clg_id').value;
+			var pnum = document.getElementById('p_num').value;
+			var email = document.getElementById('e_mail').value;
+			var password = document.getElementById('passwo_d').value;
+			var cb = document.getElementsByName('c_b');
+			var rb = document.getElementsByName('r_b');
+			if (fname == ''){
+				alert('Please Enter First Name');
+				return false
+			}
+			if (lname == ''){
+				alert('Please Enter Last Name');
+				return false
+			}
+			if (clg == ''){
+				alert('please Select college');
+				return false
+			}
+			if (pnum == '') {
+				alert('Please Enter your number');
+				return false
+			}
+			if (pnum.length != 10){
+				alert('Please Enter the valid Phone number');
+				return false
+			}
+			if (email == '') {
+				alert('Please Enter your mail id');
+				return false
+			}
+			if (password == '') {
+				alert('please Enter the password');
+				return false
+			}
+			if (password.length < 8){
+				alert('Please enter the password of minimum 8 characters');
+				return false
+			}
+			if (!(rb[0].checked || rb[1].checked)){
+				alert('Please Choose Gender');
+				return false
+			}
+			if (!(cb[0].checked && cb[1].checked)){
+				alert('Please agree with all terms and conditions');
+				return false
+			}
+		}
+	</script>
+</body>
+</html>

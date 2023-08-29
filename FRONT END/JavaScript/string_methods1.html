@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Methods</title>
+</head>
+<body>
+	<table border="1" cellspacing="0" cellpadding="10">
+		<tr>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+			<td>15</td>
+			<td>16</td>
+			<td>17</td>
+		</tr>
+		<tr>
+			<td>S</td>
+			<td>h</td>
+			<td>a</td>
+			<td>n</td>
+			<td>m</td>
+			<td>u</td>
+			<td>k</td>
+			<td>h</td>
+			<td>a</td>
+			<td>&nbsp;</td>
+			<td>S</td>
+			<td>r</td>
+			<td>i</td>
+			<td>n</td>
+			<td>i</td>
+			<td>v</td>
+			<td>a</td>
+			<td>s</td>
+		</tr>
+		<tr>
+			<td>-18</td>
+			<td>-17</td>
+			<td>-16</td>
+			<td>-15</td>
+			<td>-14</td>
+			<td>-13</td>
+			<td>-12</td>
+			<td>-11</td>
+			<td>-10</td>
+			<td>-9</td>
+			<td>-8</td>
+			<td>-7</td>
+			<td>-6</td>
+			<td>-5</td>
+			<td>-4</td>
+			<td>-3</td>
+			<td>-2</td>
+			<td>-1</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		let str = 'Shanmukha Srinivas';
+		function func(st) {
+			document.write('<br>'+st);
+		}
+		func(str)
+		func(str.length)
+		func(str[3])
+		func(str.charAt(5))
+		func(str.indexOf('a'))
+		func(str.lastIndexOf('a'))
+		let str1 = '        shanmukh         '
+		func(str1)
+		func(str1.trim().length) // removes spaces
+		let str2 = 'SHANMUKH'
+		func(str2.toLowerCase())
+		let str3 = 'shanmukh'
+		func(str3.toUpperCase())
+		let str4 = 'Shan'
+		let str5 = ' mukh'
+		let str6 = ' srin'
+		let str7 = ' ivas'
+		func(str4+str5)
+		func(str4.concat(str5,str6,str7))
+		let str8 = 'shan mukh sri ni vas'
+		func(str8.includes('sri'))
+		func(str.split("m"))
+		let str9 = 'amma';
+		func(str9.startsWith('a'))
+		func(str9.endsWith('a'))
+
+		let str10 = 'abcdefghijklmnopqrstuvwxyz';
+		func(str10.slice(3,11))
+
+
+		func(str10.substring(11,3)) // giving indexes reverse changes to original pos
+
+		func(str10.substr(4,4)) // (4,9) => (start,length to be displayed from start) 
+
+		// for(i = 0;i<str.length;i++){
+		// 	document.write(str[i]+'<br>');
+		// }
+	</script>
+</body>
+</html>
